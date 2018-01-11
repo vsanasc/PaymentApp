@@ -15,6 +15,9 @@
 		4EB0DED42006DAEF0015259C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB0DED22006DAEF0015259C /* LaunchScreen.storyboard */; };
 		4EB0DED72006DAEF0015259C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DED62006DAEF0015259C /* main.m */; };
 		4EB0DEE12006DAEF0015259C /* PaymentAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DEE02006DAEF0015259C /* PaymentAppTests.m */; };
+		4EB0DF13200715650015259C /* BankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DF12200715650015259C /* BankModel.m */; };
+		4EB0DF16200715BC0015259C /* InstallmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DF15200715BC0015259C /* InstallmentModel.m */; };
+		4EB0DF192007166F0015259C /* MethodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DF182007166F0015259C /* MethodModel.m */; };
 		61B63996323D721BEBCF5EFC /* libPods-PaymentAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC7EC0438778756563CC83D /* libPods-PaymentAppTests.a */; };
 		8F86332D7953D1F7D06BAABC /* libPods-PaymentApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C95FCA84E0EEB038386C70E /* libPods-PaymentApp.a */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,12 @@
 		4EB0DEDC2006DAEF0015259C /* PaymentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB0DEE02006DAEF0015259C /* PaymentAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentAppTests.m; sourceTree = "<group>"; };
 		4EB0DEE22006DAEF0015259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB0DF11200715650015259C /* BankModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankModel.h; sourceTree = "<group>"; };
+		4EB0DF12200715650015259C /* BankModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankModel.m; sourceTree = "<group>"; };
+		4EB0DF14200715BC0015259C /* InstallmentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentModel.h; sourceTree = "<group>"; };
+		4EB0DF15200715BC0015259C /* InstallmentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentModel.m; sourceTree = "<group>"; };
+		4EB0DF172007166F0015259C /* MethodModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodModel.h; sourceTree = "<group>"; };
+		4EB0DF182007166F0015259C /* MethodModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodModel.m; sourceTree = "<group>"; };
 		60F8584CC5280DBC3F02E197 /* Pods-PaymentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaymentAppTests/Pods-PaymentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B290DF40BF754530B4C93EF1 /* Pods-PaymentAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaymentAppTests/Pods-PaymentAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6338695C00F2FF9BE2E6CC8 /* Pods-PaymentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaymentApp/Pods-PaymentApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +115,7 @@
 		4EB0DEC32006DAEE0015259C /* PaymentApp */ = {
 			isa = PBXGroup;
 			children = (
+				4EB0DF0D200714080015259C /* Models */,
 				4EB0DEC42006DAEE0015259C /* AppDelegate.h */,
 				4EB0DEC52006DAEE0015259C /* AppDelegate.m */,
 				4EB0DEC72006DAEE0015259C /* ViewController.h */,
@@ -127,6 +137,19 @@
 				4EB0DEE22006DAEF0015259C /* Info.plist */,
 			);
 			path = PaymentAppTests;
+			sourceTree = "<group>";
+		};
+		4EB0DF0D200714080015259C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0DF11200715650015259C /* BankModel.h */,
+				4EB0DF12200715650015259C /* BankModel.m */,
+				4EB0DF14200715BC0015259C /* InstallmentModel.h */,
+				4EB0DF15200715BC0015259C /* InstallmentModel.m */,
+				4EB0DF172007166F0015259C /* MethodModel.h */,
+				4EB0DF182007166F0015259C /* MethodModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A2957C3D2CF3A049B8DF81F6 /* Frameworks */ = {
@@ -345,9 +368,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB0DEC92006DAEE0015259C /* ViewController.m in Sources */,
+				4EB0DF13200715650015259C /* BankModel.m in Sources */,
+				4EB0DF16200715BC0015259C /* InstallmentModel.m in Sources */,
 				4EB0DEC62006DAEE0015259C /* AppDelegate.m in Sources */,
 				4EB0DED72006DAEF0015259C /* main.m in Sources */,
 				4EB0DECF2006DAEF0015259C /* PaymentApp.xcdatamodeld in Sources */,
+				4EB0DF192007166F0015259C /* MethodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
