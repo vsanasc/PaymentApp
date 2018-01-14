@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4E47CB5B20086045002882D1 /* Req.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CB5A20086044002882D1 /* Req.m */; };
 		4E47CB6020086821002882D1 /* MainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CB5F20086821002882D1 /* MainTableView.m */; };
+		4E68AD46200AFC910076B9DD /* NSLayoutConstraint+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E68AD45200AFC910076B9DD /* NSLayoutConstraint+Description.m */; };
+		4E68AD49200AFD750076B9DD /* UIColor+MercadoPago.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E68AD48200AFD750076B9DD /* UIColor+MercadoPago.m */; };
+		4E68AD4C200B27900076B9DD /* SummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E68AD4B200B27900076B9DD /* SummaryView.m */; };
+		4E68AD4F200B30210076B9DD /* UIView+Fade.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E68AD4E200B30210076B9DD /* UIView+Fade.m */; };
 		4E6C2D4D200977E600DB857C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C2D4C200977E600DB857C /* Main.storyboard */; };
 		4EB0DEC62006DAEE0015259C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DEC52006DAEE0015259C /* AppDelegate.m */; };
 		4EB0DEC92006DAEE0015259C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DEC82006DAEE0015259C /* MainViewController.m */; };
@@ -50,6 +54,14 @@
 		4E47CB5A20086044002882D1 /* Req.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Req.m; sourceTree = "<group>"; };
 		4E47CB5E20086821002882D1 /* MainTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableView.h; sourceTree = "<group>"; };
 		4E47CB5F20086821002882D1 /* MainTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableView.m; sourceTree = "<group>"; };
+		4E68AD44200AFC910076B9DD /* NSLayoutConstraint+Description.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Description.h"; sourceTree = "<group>"; };
+		4E68AD45200AFC910076B9DD /* NSLayoutConstraint+Description.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Description.m"; sourceTree = "<group>"; };
+		4E68AD47200AFD750076B9DD /* UIColor+MercadoPago.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MercadoPago.h"; sourceTree = "<group>"; };
+		4E68AD48200AFD750076B9DD /* UIColor+MercadoPago.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MercadoPago.m"; sourceTree = "<group>"; };
+		4E68AD4A200B27900076B9DD /* SummaryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SummaryView.h; sourceTree = "<group>"; };
+		4E68AD4B200B27900076B9DD /* SummaryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryView.m; sourceTree = "<group>"; };
+		4E68AD4D200B30210076B9DD /* UIView+Fade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Fade.h"; sourceTree = "<group>"; };
+		4E68AD4E200B30210076B9DD /* UIView+Fade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Fade.m"; sourceTree = "<group>"; };
 		4E6C2D4C200977E600DB857C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EB0DEC12006DAEE0015259C /* PaymentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB0DEC42006DAEE0015259C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +144,12 @@
 			children = (
 				4E47CB5920086044002882D1 /* Req.h */,
 				4E47CB5A20086044002882D1 /* Req.m */,
+				4E68AD44200AFC910076B9DD /* NSLayoutConstraint+Description.h */,
+				4E68AD45200AFC910076B9DD /* NSLayoutConstraint+Description.m */,
+				4E68AD47200AFD750076B9DD /* UIColor+MercadoPago.h */,
+				4E68AD48200AFD750076B9DD /* UIColor+MercadoPago.m */,
+				4E68AD4D200B30210076B9DD /* UIView+Fade.h */,
+				4E68AD4E200B30210076B9DD /* UIView+Fade.m */,
 			);
 			path = Healpers;
 			sourceTree = "<group>";
@@ -199,6 +217,8 @@
 				4EB0DF0820070BE40015259C /* InstallmentsCell.m */,
 				4E47CB5E20086821002882D1 /* MainTableView.h */,
 				4E47CB5F20086821002882D1 /* MainTableView.m */,
+				4E68AD4A200B27900076B9DD /* SummaryView.h */,
+				4E68AD4B200B27900076B9DD /* SummaryView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,18 +477,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E68AD4F200B30210076B9DD /* UIView+Fade.m in Sources */,
 				4EB0DF0620070A7A0015259C /* CreditCardCell.m in Sources */,
+				4E68AD4C200B27900076B9DD /* SummaryView.m in Sources */,
 				4EB0DEC92006DAEE0015259C /* MainViewController.m in Sources */,
 				4EB0DF13200715650015259C /* BankModel.m in Sources */,
 				4EB0DF16200715BC0015259C /* InstallmentModel.m in Sources */,
 				4EB0DEC62006DAEE0015259C /* AppDelegate.m in Sources */,
 				4EB0DF0920070BE40015259C /* InstallmentsCell.m in Sources */,
+				4E68AD46200AFC910076B9DD /* NSLayoutConstraint+Description.m in Sources */,
 				4E47CB5B20086045002882D1 /* Req.m in Sources */,
 				4E47CB6020086821002882D1 /* MainTableView.m in Sources */,
 				4EB0DED72006DAEF0015259C /* main.m in Sources */,
 				4EB0DF0C20070C690015259C /* BankCell.m in Sources */,
 				4EB0DECF2006DAEF0015259C /* PaymentApp.xcdatamodeld in Sources */,
 				4EB0DF03200709530015259C /* AmountCell.m in Sources */,
+				4E68AD49200AFD750076B9DD /* UIColor+MercadoPago.m in Sources */,
 				4EB0DF192007166F0015259C /* MethodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
