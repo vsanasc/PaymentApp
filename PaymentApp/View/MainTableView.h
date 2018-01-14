@@ -9,8 +9,8 @@
 
 typedef NS_ENUM(NSInteger, CellType) {
 	Amount,
-	Bank,
 	CreditCard,
+	Bank,
 	Installments
 };
 
