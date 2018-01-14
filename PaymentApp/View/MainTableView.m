@@ -12,12 +12,13 @@
 
 -(void) commonInit{
 	
-	self.allowsSelection = NO;
+	self.backgroundColor = [UIColor whiteColor];
 	
 	[self registerNib:[UINib nibWithNibName:@"AmountCell" bundle:nil] forCellReuseIdentifier:@"amount"];
 	[self registerNib:[UINib nibWithNibName:@"CreditCardCell" bundle:nil] forCellReuseIdentifier:@"creditCard"];
 	[self registerNib:[UINib nibWithNibName:@"BankCell" bundle:nil] forCellReuseIdentifier:@"bank"];
 	[self registerNib:[UINib nibWithNibName:@"InstallmentsCell" bundle:nil] forCellReuseIdentifier:@"installment"];
+	
 	
 }
 
