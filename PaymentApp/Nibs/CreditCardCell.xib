@@ -19,15 +19,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="322" id="XXO-gp-cVr" customClass="CreditCardCell" customModule="PaymentApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="322"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="330" id="XXO-gp-cVr" customClass="CreditCardCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XXO-gp-cVr" id="i2a-PX-DUT">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="321.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="329.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TA4-b6-epE">
-                        <rect key="frame" x="0.0" y="-0.5" width="375" height="60.5"/>
+                        <rect key="frame" x="0.0" y="-0.5" width="375" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Método de Pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-ZB-7ba">
                                 <rect key="frame" x="20" y="21.5" width="111" height="17"/>
@@ -52,26 +52,26 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-qn-RrJ">
-                        <rect key="frame" x="0.0" y="60" width="375" height="263"/>
+                        <rect key="frame" x="0.0" y="59.5" width="375" height="270"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Método de Pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6u-IO-xba">
-                                <rect key="frame" x="20" y="23.5" width="111" height="17"/>
+                                <rect key="frame" x="20" y="30" width="111" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.12941176469999999" green="0.17254901959999999" blue="0.4039215686" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elK-8Z-Geh">
-                                <rect key="frame" x="187" y="20" width="168" height="24"/>
+                                <rect key="frame" x="187" y="20" width="168" height="37"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="TBw-hg-zLX">
-                                        <rect key="frame" x="5" y="9" width="20" height="7"/>
+                                        <rect key="frame" x="5" y="9" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="H2J-Hd-HjV"/>
                                             <constraint firstAttribute="width" constant="20" id="NYD-ZE-nIo"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarjeta de Crédito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCe-fR-pcu">
-                                        <rect key="frame" x="40" y="4.5" width="111" height="17"/>
+                                        <rect key="frame" x="40" y="10.5" width="111" height="17"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.20000000000000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocz-i3-dpT">
-                                <rect key="frame" x="68" y="84" width="240" height="149"/>
+                                <rect key="frame" x="68" y="97" width="240" height="149"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="6YS-tF-H9r">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="149"/>
@@ -127,9 +127,10 @@
                         <constraints>
                             <constraint firstItem="elK-8Z-Geh" firstAttribute="leading" secondItem="C6u-IO-xba" secondAttribute="trailing" constant="56" id="RCv-s5-stg"/>
                             <constraint firstItem="C6u-IO-xba" firstAttribute="leading" secondItem="tPh-qn-RrJ" secondAttribute="leading" constant="20" id="RDa-8C-gjI"/>
+                            <constraint firstAttribute="height" constant="270" id="ZGu-J2-ctm"/>
                             <constraint firstItem="C6u-IO-xba" firstAttribute="centerY" secondItem="elK-8Z-Geh" secondAttribute="centerY" id="a3H-er-D7x"/>
                             <constraint firstItem="ocz-i3-dpT" firstAttribute="centerX" secondItem="tPh-qn-RrJ" secondAttribute="centerX" id="dN7-W3-APM"/>
-                            <constraint firstAttribute="bottom" secondItem="ocz-i3-dpT" secondAttribute="bottom" constant="30" id="kny-jH-Yf0"/>
+                            <constraint firstAttribute="bottom" secondItem="ocz-i3-dpT" secondAttribute="bottom" priority="250" constant="30" id="kny-jH-Yf0"/>
                             <constraint firstAttribute="trailing" secondItem="elK-8Z-Geh" secondAttribute="trailing" constant="20" id="ktz-cH-LHs"/>
                             <constraint firstItem="elK-8Z-Geh" firstAttribute="top" secondItem="tPh-qn-RrJ" secondAttribute="top" constant="20" id="nco-gR-8bs"/>
                             <constraint firstItem="ocz-i3-dpT" firstAttribute="top" secondItem="elK-8Z-Geh" secondAttribute="bottom" constant="40" id="tjm-wK-hLp"/>
@@ -139,7 +140,6 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="tPh-qn-RrJ" secondAttribute="trailing" id="00H-S0-bqk"/>
                     <constraint firstAttribute="bottom" secondItem="tPh-qn-RrJ" secondAttribute="bottom" id="73m-xF-dD8"/>
-                    <constraint firstItem="TA4-b6-epE" firstAttribute="top" secondItem="i2a-PX-DUT" secondAttribute="top" id="GSQ-j6-ain"/>
                     <constraint firstItem="tPh-qn-RrJ" firstAttribute="leading" secondItem="i2a-PX-DUT" secondAttribute="leading" id="arW-rq-vLB"/>
                     <constraint firstItem="tPh-qn-RrJ" firstAttribute="top" secondItem="TA4-b6-epE" secondAttribute="bottom" id="jZm-ia-RoM"/>
                     <constraint firstAttribute="trailing" secondItem="TA4-b6-epE" secondAttribute="trailing" id="qbh-DP-yqt"/>
@@ -148,13 +148,13 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="content" destination="tPh-qn-RrJ" id="8dp-j1-Z4d"/>
-                <outlet property="logoCard" destination="PTn-aF-l0R" id="o46-E5-25D"/>
-                <outlet property="nameCard" destination="hLo-xB-Lto" id="oH6-Et-loW"/>
-                <outlet property="top" destination="TA4-b6-epE" id="NNl-1e-h42"/>
-                <outlet property="topValue" destination="MlV-qf-a8a" id="azW-tk-8ux"/>
+                <outlet property="content" destination="tPh-qn-RrJ" id="Rsv-DI-dmn"/>
+                <outlet property="logoCard" destination="PTn-aF-l0R" id="oPG-OF-Lqo"/>
+                <outlet property="nameCard" destination="hLo-xB-Lto" id="bmS-1I-BN5"/>
+                <outlet property="top" destination="TA4-b6-epE" id="HGz-mE-Dxc"/>
+                <outlet property="topValue" destination="MlV-qf-a8a" id="oQ2-4A-GC9"/>
             </connections>
-            <point key="canvasLocation" x="28.5" y="188"/>
+            <point key="canvasLocation" x="28.5" y="184"/>
         </tableViewCell>
     </objects>
     <resources>
