@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "UIColor+MercadoPago.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +20,17 @@
 	
 	MainViewController *rootVC = (MainViewController *) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"main"];
 	
+	UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVC];
+	nav.navigationBar.barTintColor = [UIColor mpBlue];
+	nav.navigationBar.tintColor = [UIColor whiteColor];
+	[nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+	[nav.navigationBar setBarStyle:(int)UIStatusBarStyleLightContent];
+	[nav.navigationBar setPrefersLargeTitles:YES];
+	
+	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	[self.window makeKeyAndVisible];
-	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];
+	self.window.rootViewController = nav;
 	
 	
 	
