@@ -6,7 +6,9 @@ target 'PaymentApp' do
   # use_frameworks!
 
   # Pods for PaymentApp
-
+  pod 'ActionSheetPicker-3.0', '~> 1.3.4'
+  pod 'SDWebImage', '~> 4.0'
+  
   target 'PaymentAppTests' do
     inherit! :search_paths
     # Pods for testing
