@@ -93,7 +93,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="6YS-tF-H9r">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="149"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTn-aF-l0R">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTn-aF-l0R">
                                         <rect key="frame" x="187" y="10" width="43" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="43" id="J0q-Ay-osG"/>
@@ -154,12 +154,12 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="content" destination="tPh-qn-RrJ" id="Rsv-DI-dmn"/>
-                <outlet property="contentHeight" destination="ZGu-J2-ctm" id="Ddu-8A-Orc"/>
+                <outlet property="contentHeight" destination="ZGu-J2-ctm" id="W0a-fp-s9m"/>
                 <outlet property="logoCard" destination="PTn-aF-l0R" id="oPG-OF-Lqo"/>
                 <outlet property="nameCard" destination="hLo-xB-Lto" id="bmS-1I-BN5"/>
                 <outlet property="selectContent" destination="elK-8Z-Geh" id="Y3s-D8-Xjb"/>
                 <outlet property="top" destination="TA4-b6-epE" id="HGz-mE-Dxc"/>
-                <outlet property="topHeight" destination="cpN-Ba-P9u" id="aVj-Cz-Pso"/>
+                <outlet property="topHeight" destination="cpN-Ba-P9u" id="v57-ao-oGg"/>
                 <outlet property="topValue" destination="MlV-qf-a8a" id="oQ2-4A-GC9"/>
             </connections>
             <point key="canvasLocation" x="28.5" y="184"/>

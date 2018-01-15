@@ -6,15 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseCell.h"
 
-@interface InstallmentsCell : UITableViewCell
+@interface InstallmentsCell : BaseCell
 
 @property (strong, nonatomic) IBOutlet UIView *top;
 @property (weak, nonatomic) IBOutlet UILabel *topValue;
 @property (strong, nonatomic) IBOutlet UIView *content;
 @property (strong, nonatomic) IBOutlet UIView *selectContent;
-
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
 
 @end

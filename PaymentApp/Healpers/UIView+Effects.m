@@ -5,22 +5,26 @@
 //  Created by Vitor Santos do Nascimento on 1/14/18.
 //
 
-#import "UIView+Fade.h"
+#import "UIView+Effects.h"
 
-@implementation UIView (Fade)
+@implementation UIView (Effects)
 
--(void)fadeOut{
+-(void)scale:(void (^ __nullable)(BOOL finished))completion{
+	
+}
+
+-(void)fadeOut:(void (^ __nullable)(BOOL finished))completion{
 	
 	[UIView transitionWithView: self duration: 0.35f options: UIViewAnimationOptionTransitionCrossDissolve animations: ^(void){
 		self.alpha = 0;
-	 } completion: nil];
+	 } completion: completion];
 	
 }
--(void)fadeIn{
+-(void)fadeIn:(void (^ __nullable)(BOOL finished))completion{
 	
 	[UIView transitionWithView: self duration: 0.35f options: UIViewAnimationOptionTransitionCrossDissolve animations: ^(void){
 		self.alpha = 1;
-	} completion: nil];
+	} completion: completion];
 	
 }
 

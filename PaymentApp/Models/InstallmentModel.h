@@ -9,7 +9,10 @@
 
 @interface InstallmentModel : NSObject
 
-@property int installments;
-@property (strong, nonatomic) NSString *message;
+@property (nonatomic) int installments;
+@property (nonatomic) int value;
+@property (nonatomic, strong) NSString *message;
+
++(void)listByParams:(int)amount withMethod:(NSString *)method withBank:(NSString *)bank completionHandler:(void (^)(NSArray<InstallmentModel *> *elements))completion;
 
 @end

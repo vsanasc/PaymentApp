@@ -13,17 +13,14 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 	
-	[self setSelectionStyle:UITableViewCellSelectionStyleNone];
-	
 	self.contentCurrency.clipsToBounds = YES;
 	[self.contentCurrency.layer setCornerRadius:10.0];
 	
-	self.textField.delegate = self;
+	//self.textField.delegate = self;
 	
 	
 	
 }
-
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
 	
 	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init] ;

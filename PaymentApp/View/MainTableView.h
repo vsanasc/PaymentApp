@@ -7,13 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, CellType) {
-	Amount,
-	CreditCard,
-	Bank,
-	Installments
-};
-
 @interface MainTableView : UITableView
 
 @end
