@@ -2,6 +2,8 @@
 
 > This app has a purpose to show a simple integration with Mercardo Pago API Service
 
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
+
 ## Features
 
 - [x] Add Amount
