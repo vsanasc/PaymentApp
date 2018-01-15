@@ -119,7 +119,7 @@
 -(void)selectMethod:(UITapGestureRecognizer *)sender{
 	
 	if(self.listMethods.count == 0){
-		
+		[self showAlert:@"Aún no se carga los métodos de pago. Intente más tarde."];
 		return;
 	}
 	
@@ -156,7 +156,7 @@
 -(void)selectBank:(UITapGestureRecognizer *)sender{
 	
 	if(self.listBanks.count == 0){
-		
+		[self showAlert:@"Aún no se carga los bancos. Elija otro método de pago o intente más tarde."];
 		return;
 	}
 	
@@ -193,7 +193,7 @@
 -(void)selectInstallments:(UITapGestureRecognizer *)sender{
 	
 	if(self.listInstallment.count == 0){
-		
+		[self showAlert:@"Aún no se carga las opciones de cuotas. Elija otro banco o intente más tarde."];
 		return;
 	}
 	
@@ -243,33 +243,17 @@
 	}
 	
 }
-/*
+
 -(void)showAlert:(NSString *)text{
-	UIAlertController * alert = [UIAlertController
-								 alertControllerWithTitle:@"Title"
-								 message:@"Message"
-								 preferredStyle:UIAlertControllerStyleAlert];
 	
+	UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Atención" message:text preferredStyle:UIAlertControllerStyleAlert];
 	
+	[alert addAction:[UIAlertAction actionWithTitle:@"Aceptar" style:UIAlertActionStyleDefault handler:nil]];
 	
-	UIAlertAction* yesButton = [UIAlertAction
-								actionWithTitle:@"Yes, please"
-								style:UIAlertActionStyleDefault
-								handler:^(UIAlertAction * action) {
-									//Handle your yes please button action here
-								}];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self.parent presentViewController:alert animated:YES completion:nil];
+	});
 	
-	UIAlertAction* noButton = [UIAlertAction
-							   actionWithTitle:@"No, thanks"
-							   style:UIAlertActionStyleDefault
-							   handler:^(UIAlertAction * action) {
-								   //Handle no, thanks button
-							   }];
-	
-	[alert addAction:yesButton];
-	[alert addAction:noButton];
-	
-	[self presentViewController:alert animated:YES completion:nil];
 }
- */
+ 
 @end
