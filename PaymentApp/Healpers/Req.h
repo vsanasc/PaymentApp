@@ -13,7 +13,7 @@
 
 +(instancetype) instance;
 
--(void)getWithAPI:NSString;
+-(void)getWithAPI:(NSString*)api completionWithJSON:(void (^)(NSArray *data))completion;
 
 
 @end
