@@ -9,7 +9,9 @@
 
 @interface UIView (Effects)
 
--(void)scale:(void (^ __nullable)(BOOL finished))completion;
+-(void)scalePress:(void (^ __nullable)(BOOL finished))completion;
+
+-(void)scaleChange:(void (^ __nullable)(BOOL finished))completion;
 
 -(void)fadeOut:(void (^ __nullable)(BOOL finished))completion;
 -(void)fadeIn:(void (^ __nullable)(BOOL finished))completion;
