@@ -111,10 +111,10 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="content" destination="lvc-ao-XdQ" id="Kzu-Xy-Or6"/>
-                <outlet property="contentHeight" destination="MLd-Kx-lc7" id="bFi-4E-Krx"/>
+                <outlet property="contentHeight" destination="MLd-Kx-lc7" id="LAP-lo-0PK"/>
                 <outlet property="selectContent" destination="kNa-gU-nzL" id="F6P-Bj-2oO"/>
                 <outlet property="top" destination="2ec-Ob-9qY" id="aaQ-Cz-Vlo"/>
-                <outlet property="topHeight" destination="tLY-xb-LOL" id="bga-Ih-xGE"/>
+                <outlet property="topHeight" destination="tLY-xb-LOL" id="W0H-nX-68R"/>
                 <outlet property="topValue" destination="mX6-gb-mmG" id="AaD-ge-It3"/>
             </connections>
             <point key="canvasLocation" x="28.5" y="104"/>

@@ -129,11 +129,11 @@
             <connections>
                 <outlet property="content" destination="yXr-y2-uS5" id="eua-aZ-Ns4"/>
                 <outlet property="contentCurrency" destination="jdZ-Ua-Wme" id="aeX-kM-tc5"/>
-                <outlet property="contentHeight" destination="Ytl-Un-brk" id="1tH-Fh-Gfp"/>
+                <outlet property="contentHeight" destination="Ytl-Un-brk" id="Tpv-Ln-7X1"/>
                 <outlet property="contentTextField" destination="bIc-Ha-YQh" id="Cwo-xb-cvg"/>
                 <outlet property="textField" destination="YSQ-TB-RAw" id="GIp-tO-FHz"/>
                 <outlet property="top" destination="jg0-uc-aDZ" id="KhB-Wh-6Pe"/>
-                <outlet property="topHeight" destination="vbq-gI-Pkc" id="8CU-No-ueN"/>
+                <outlet property="topHeight" destination="vbq-gI-Pkc" id="Nka-b8-ulO"/>
                 <outlet property="topValue" destination="aLB-Q7-YCF" id="BTh-4g-JxC"/>
             </connections>
             <point key="canvasLocation" x="-35.5" y="170.5"/>
