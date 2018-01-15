@@ -14,8 +14,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 	
-	[self setSelectionStyle:UITableViewCellSelectionStyleNone];
-	
 	self.selectContent.clipsToBounds = YES;
 	[self.selectContent.layer setCornerRadius:(self.selectContent.frame.size.height / 2)];
 	[self.selectContent.layer setBorderColor:[UIColor mpBlue].CGColor];
@@ -28,5 +26,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end

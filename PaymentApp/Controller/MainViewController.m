@@ -9,11 +9,9 @@
 #import "MainViewController.h"
 #import "MainTableView.h"
 
-#import "AmountCell.h"
-#import "CreditCardCell.h"
-#import "BankCell.h"
-#import "InstallmentsCell.h"
 #import "SummaryView.h"
+
+#import "MethodModel.h"
 
 #import "UIColor+MercadoPago.h"
 
@@ -26,10 +24,14 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.position = 0;
-	self.contentHeights = @[@170.0, @270.0, @80.0,@95.0];
-	self.tipTexts = @[@"Agregar monto",@"Elegir tarjeta de crédito",@"Elegir Banco",@"Elegir Cuotas"];
+	self.customCellDelegate = [[CustomCell alloc]initWithParent:self];
+	self.transaction = [[TransactionModel alloc]init];
 	
+	self.position = 0;
+	self.transaction.value = 0;
+	self.tipTexts = @[@"Agregar monto",@"Elegir tarjeta de crédito",@"Elegir Banco",@"Elegir Cuotas"];
+	[self setTip];
+	[self stateContinue];
 	
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
@@ -41,77 +43,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return _position + 1;
+	return self.position + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	switch ((CellType) indexPath.row) {
-		
-		case Amount:{
-			AmountCell *cell = (AmountCell *)[tableView dequeueReusableCellWithIdentifier:@"amount"];
-			
-			if(self.position == indexPath.row){
-				cell.topHeight.constant = 0;
-				cell.contentHeight.constant = [self.contentHeights[indexPath.row]floatValue];
-			}else{
-				cell.topHeight.constant = 60;
-				cell.contentHeight.constant = 0;
-			}
-			
-			
-			return cell;
-			
-		}
-		
-		case Bank:{
-		
-			BankCell *cell = (BankCell *)[tableView dequeueReusableCellWithIdentifier:@"bank"];
-			
-			if(self.position == indexPath.row){
-				cell.topHeight.constant = 0;
-				cell.contentHeight.constant = [self.contentHeights[indexPath.row]floatValue];
-			}else{
-				cell.topHeight.constant = 60;
-				cell.contentHeight.constant = 0;
-			}
-			
-			return cell;
-		
-		}
-		
-		case CreditCard:{
-			CreditCardCell *cell = (CreditCardCell *)[tableView dequeueReusableCellWithIdentifier:@"creditCard"];
-			
-			if(self.position == indexPath.row){
-				cell.topHeight.constant = 0;
-				cell.contentHeight.constant = [self.contentHeights[indexPath.row]floatValue];
-			}else{
-				cell.topHeight.constant = 60;
-				cell.contentHeight.constant = 0;
-			}
-			
-			return cell;
-		}
-		
-		case Installments:{
-			InstallmentsCell *cell = (InstallmentsCell *)[tableView dequeueReusableCellWithIdentifier:@"installment"];
-			
-			if(self.position == indexPath.row){
-				cell.topHeight.constant = 0;
-				cell.contentHeight.constant = [self.contentHeights[indexPath.row]floatValue];
-			}else{
-				cell.topHeight.constant = 60;
-				cell.contentHeight.constant = 0;
-			}
-			
-			
-			return cell;
-		}
-		
-	}
-	
-	
+	return [self.customCellDelegate tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -125,32 +61,29 @@
 }
 	
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	
-	if (indexPath.row < self.position){
-		return 60.0;
-	}else if(indexPath.row == self.position){
-		return [self.contentHeights[indexPath.row] floatValue] + 60.0;
-	}else{
-		return 0;
-	}
-	
+	return [self.customCellDelegate tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 	
 -(IBAction) nextAction:(id)sender{
-	
+
 	if(self.position < 3){
 		self.position = self.position + 1;
 		[self setTip];
 		[self reloadData];
 	}else{
 		
-		SummaryView *summary = (SummaryView *) [[[NSBundle mainBundle] loadNibNamed:@"Summary" owner:self options:nil] firstObject];
+		SummaryView *summary = [[SummaryView alloc]initWithParent:self];
 		
 		AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
 		[app.window addSubview:summary];
-		[app.window bringSubviewToFront:summary];
 		
+		[app.window addConstraint:[NSLayoutConstraint constraintWithItem:summary attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:app.window attribute:NSLayoutAttributeTop multiplier:1.0 constant:0]];
 		
+		[app.window addConstraint:[NSLayoutConstraint constraintWithItem:summary attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:app.window attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
+		
+		[app.window addConstraint:[NSLayoutConstraint constraintWithItem:summary attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:app.window attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
+		
+		[app.window addConstraint:[NSLayoutConstraint constraintWithItem:summary attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:app.window attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
 		
 	}
 }
@@ -160,13 +93,35 @@
 }
 -(void)reloadData{
 	
-	[UIView transitionWithView: self.tableView
-					  duration: 0.35f
-					   options: UIViewAnimationOptionTransitionCrossDissolve					animations: ^(void)
-	 {
-		 [self.tableView reloadData];
-	 }
-					completion: nil];
+	[self stateContinue];
+	
+	[UIView transitionWithView: self.tableView duration: 0.35f options: UIViewAnimationOptionTransitionCrossDissolve animations: ^(void){
+		 dispatch_async(dispatch_get_main_queue(), ^{
+			 [self.tableView reloadData];
+		 });
+	 }completion: nil];
+}
+
+-(void)stateContinue{
+	[self.next setEnabled:NO];
+	
+	if(self.position == 0 && self.transaction.value > 0){
+		[self.next setEnabled:YES];
+	}
+	
+	if(self.position == 1 && self.transaction.method != nil){
+		[self.next setEnabled:YES];
+	}
+	
+	if(self.position == 2 && self.transaction.bank != nil){
+		[self.next setEnabled:YES];
+	}
+	
+	if(self.position == 3 && self.transaction.installments != nil){
+		[self.next setEnabled:YES];
+	}
+	
+	
 }
 
 @end

@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseCell.h"
 
-@interface AmountCell : UITableViewCell<UITextFieldDelegate>
+@interface AmountCell : BaseCell<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *top;
 @property (weak, nonatomic) IBOutlet UILabel *topValue;
@@ -15,9 +16,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) IBOutlet UIView *contentCurrency;
 @property (strong, nonatomic) IBOutlet UIView *contentTextField;
-
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
 
 
 @end
