@@ -59,6 +59,10 @@ pod 'SDWebImage', '~> 4.0'
 - [ ] Custom iPad Layout
 - [ ] Core data implementation
 - [ ] LaunchScreen animated
+- [ ] LaunchScreen animated
+- [ ] Network validation
+- [ ] Improve Architecture
+
 
 ## Meta
 
