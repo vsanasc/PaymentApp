@@ -58,12 +58,14 @@ pod 'SDWebImage', '~> 4.0'
 ## Future improvements
 
 - [ ] Landscape Support
+- [ ] iPad Support
 - [ ] Custom iPad Layout
-- [ ] Core data implementation
-- [ ] LaunchScreen animated
-- [ ] LaunchScreen animated
-- [ ] Network validation
+- [ ] Add more animations with purpose (UX)
+- [ ] LaunchScreen Animated
+- [ ] CoreData
+- [ ] Network Validation
 - [ ] Improve Architecture
+- [ ] Add Commentaries in the Code
 
 
 ## Meta
