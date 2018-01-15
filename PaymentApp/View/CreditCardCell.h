@@ -10,12 +10,14 @@
 
 @interface CreditCardCell : BaseCell
 
-@property (strong, nonatomic) IBOutlet UIView *top;
-@property (weak, nonatomic) IBOutlet UILabel *topValue;
-@property (strong, nonatomic) IBOutlet UIView *content;
-@property (strong, nonatomic) IBOutlet UIView *selectContent;
+@property (nonatomic, strong) IBOutlet UIView *top;
+@property (nonatomic, weak) IBOutlet UILabel *topValue;
+@property (nonatomic, strong) IBOutlet UIView *content;
+@property (nonatomic, weak) IBOutlet UIView *selectContent;
 
-@property (strong, nonatomic) IBOutlet UIImageView *logoCard;
-@property (strong, nonatomic) IBOutlet UILabel *nameCard;
+@property (nonatomic, weak) IBOutlet UIView *cardContent;
+
+@property (nonatomic, weak) IBOutlet UIImageView *logoCard;
+@property (nonatomic, weak) IBOutlet UILabel *nameCard;
 
 @end

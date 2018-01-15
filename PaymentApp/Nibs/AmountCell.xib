@@ -30,8 +30,8 @@
                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="jg0-uc-aDZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6W-W3-fTf">
-                                <rect key="frame" x="20" y="22" width="51.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6W-W3-fTf">
+                                <rect key="frame" x="20" y="22" width="43.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.12941176470588234" green="0.17254901960784313" blue="0.40392156862745099" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

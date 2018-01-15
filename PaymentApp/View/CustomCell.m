@@ -8,6 +8,8 @@
 #import <ActionSheetPicker-3.0/ActionSheetPicker.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
+#import "UIView+Effects.h"
+
 #import "CustomCell.h"
 #import "MainViewController.h"
 #import "MainTableView.h"
@@ -25,7 +27,7 @@
 	self = [super init];
 	if(self) {
 		self.parent = parent;
-		self.contentHeights = @[@170.0, @270.0, @160.0,@95.0];
+		self.contentHeights = @[@170.0, @270.0, @160.0,@215.0];
 		self.listInstallment = [[NSMutableArray alloc]init];
 		self.listBanks = [[NSMutableArray alloc]init];
 		self.listMethods = [[NSMutableArray alloc]init];
@@ -80,7 +82,6 @@
 			[self updateHeights:cell indexPath:indexPath];
 			
 			
-			
 			[cell.selectContent addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectBank:)]];
 			
 			if(self.parent.transaction.bank != nil){
@@ -101,6 +102,8 @@
 			
 			[cell.selectContent addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectInstallments:)]];
 			
+			[cell.text setText:self.parent.transaction.installments.message];
+			
 			return cell;
 		}
 			
@@ -117,6 +120,8 @@
 	[self.parent stateContinue];
 }
 -(void)selectMethod:(UITapGestureRecognizer *)sender{
+	
+	[sender.view scalePress:nil];
 	
 	if(self.listMethods.count == 0){
 		[self showAlert:@"Aún no se carga los métodos de pago. Intente más tarde."];
@@ -138,6 +143,7 @@
 		
 		[self.parent.transaction setMethod:self.listMethods[selectedIndex]];
 		[self.parent stateContinue];
+		//self
 		
 		[BankModel listByMethod:self.listMethods[selectedIndex].id completionHandler:^(NSArray<BankModel *> *elements) {
 			self.listBanks = elements;
@@ -154,6 +160,8 @@
 }
 
 -(void)selectBank:(UITapGestureRecognizer *)sender{
+	
+	[sender.view scalePress:nil];
 	
 	if(self.listBanks.count == 0){
 		[self showAlert:@"Aún no se carga los bancos. Elija otro método de pago o intente más tarde."];
@@ -191,6 +199,8 @@
 	
 }
 -(void)selectInstallments:(UITapGestureRecognizer *)sender{
+	
+	[sender.view scalePress:nil];
 	
 	if(self.listInstallment.count == 0){
 		[self showAlert:@"Aún no se carga las opciones de cuotas. Elija otro banco o intente más tarde."];
