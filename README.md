@@ -11,27 +11,10 @@
 - [x] Summary
 - [x] Finish payment
 
-## Screenshots
-
-![](/Screenshots/1.png)
-![](/Screenshots/2.png)
-![](/Screenshots/3.png)
-![](/Screenshots/4.png)
-![](/Screenshots/5.png)
-![](/Screenshots/6.png)
-![](/Screenshots/7.png)
-![](/Screenshots/8.png)
-![](/Screenshots/9.png)
-![](/Screenshots/10.png)
-![](/Screenshots/11.png)
-
-
 ## Requirements
 
 - iOS 9.0+
 - CocoaPods
-
-
 
 #### Libraries
 
@@ -39,6 +22,20 @@
 pod 'ActionSheetPicker-3.0', '~> 1.3.4'
 pod 'SDWebImage', '~> 4.0'
 ```
+
+## Screenshots
+
+![](/Screenshots/1.PNG)
+![](/Screenshots/2.PNG)
+![](/Screenshots/3.PNG)
+![](/Screenshots/4.PNG)
+![](/Screenshots/5.PNG)
+![](/Screenshots/6.PNG)
+![](/Screenshots/7.PNG)
+![](/Screenshots/8.PNG)
+![](/Screenshots/9.PNG)
+![](/Screenshots/10.PNG)
+![](/Screenshots/11.PNG)
 
 ## Unit Testing
 
@@ -58,10 +55,10 @@ pod 'SDWebImage', '~> 4.0'
 
 ## Future improvements
 
-- [] Landscape Support
-- [] Custom iPad Layout
-- [] Core data implementation
-- [] LaunchScreen animated
+- [ ] Landscape Support
+- [ ] Custom iPad Layout
+- [ ] Core data implementation
+- [ ] LaunchScreen animated
 
 ## Meta
 
