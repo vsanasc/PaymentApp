@@ -15,6 +15,8 @@
 @property (nonatomic, strong) IBOutlet UIView *content;
 @property (nonatomic, weak) IBOutlet UIView *selectContent;
 
+@property (nonatomic, weak) IBOutlet UIView *cardContent;
+
 @property (nonatomic, weak) IBOutlet UIImageView *logo;
 @property (nonatomic, weak) IBOutlet UILabel *name;
 

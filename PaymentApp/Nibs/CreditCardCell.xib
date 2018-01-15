@@ -153,6 +153,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="cardContent" destination="ocz-i3-dpT" id="dsw-u8-2Oz"/>
                 <outlet property="content" destination="tPh-qn-RrJ" id="Rsv-DI-dmn"/>
                 <outlet property="contentHeight" destination="ZGu-J2-ctm" id="W0a-fp-s9m"/>
                 <outlet property="logoCard" destination="PTn-aF-l0R" id="oPG-OF-Lqo"/>
