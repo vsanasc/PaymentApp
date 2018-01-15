@@ -6,6 +6,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "BankModel.h"
+#import "MethodModel.h"
+#import "InstallmentModel.h"
 
 @interface PaymentAppTests : XCTestCase
 
@@ -13,26 +16,28 @@
 
 @implementation PaymentAppTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+-(void)testMethodRequest{
+	
+	[MethodModel all:^(NSArray<MethodModel *> *elements) {
+		XCTAssertTrue(YES);
+	}];
+	
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+-(void)testBankRequest{
+	
+	[BankModel listByMethod:@"visa" completionHandler:^(NSArray<BankModel *> *elements) {
+		XCTAssertTrue(YES);
+	}];
+
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)testInstallmentsRequest{
+	
+	[InstallmentModel listByParams:43000 withMethod:@"visa" withBank:@"288" completionHandler:^(NSArray<InstallmentModel *> *elements) {
+		XCTAssertTrue(YES);
+	}];
+	
 }
 
 @end
