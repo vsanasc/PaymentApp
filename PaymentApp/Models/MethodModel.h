@@ -9,8 +9,10 @@
 
 @interface MethodModel : NSObject
 
-@property (strong,nonatomic) NSString *id;
-@property (strong,nonatomic) NSString *name;
-@property (strong,nonatomic) NSString *logo;
+@property (nonatomic,strong) NSString *id;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *logo;
+
++(void)all:(void (^)(NSArray<MethodModel *> *elements))completion;
 
 @end
