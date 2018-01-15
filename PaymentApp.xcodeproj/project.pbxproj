@@ -17,6 +17,8 @@
 		4E6DF38C200BAF2A00D21BF3 /* TransactionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DF38B200BAF2A00D21BF3 /* TransactionModel.m */; };
 		4E6DF38F200BBE3B00D21BF3 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DF38E200BBE3B00D21BF3 /* CustomCell.m */; };
 		4E6DF393200BC99900D21BF3 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DF392200BC99900D21BF3 /* BaseCell.m */; };
+		4E6DF398200C30B000D21BF3 /* CategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DF397200C30B000D21BF3 /* CategoryTests.m */; };
+		4E6DF3A0200C33E700D21BF3 /* PaymentAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DF39F200C33E700D21BF3 /* PaymentAppUITests.m */; };
 		4EB0DEC62006DAEE0015259C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DEC52006DAEE0015259C /* AppDelegate.m */; };
 		4EB0DEC92006DAEE0015259C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DEC82006DAEE0015259C /* MainViewController.m */; };
 		4EB0DECF2006DAEF0015259C /* PaymentApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0DECD2006DAEF0015259C /* PaymentApp.xcdatamodeld */; };
@@ -41,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4E6DF3A2200C33E700D21BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB0DEB92006DAEE0015259C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB0DEC02006DAEE0015259C;
+			remoteInfo = PaymentApp;
+		};
 		4EB0DEDD2006DAEF0015259C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EB0DEB92006DAEE0015259C /* Project object */;
@@ -73,6 +82,10 @@
 		4E6DF390200BBE5400D21BF3 /* CustomCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCellDelegate.h; sourceTree = "<group>"; };
 		4E6DF391200BC99900D21BF3 /* BaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
 		4E6DF392200BC99900D21BF3 /* BaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		4E6DF397200C30B000D21BF3 /* CategoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryTests.m; sourceTree = "<group>"; };
+		4E6DF39D200C33E700D21BF3 /* PaymentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6DF39F200C33E700D21BF3 /* PaymentAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentAppUITests.m; sourceTree = "<group>"; };
+		4E6DF3A1200C33E700D21BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB0DEC12006DAEE0015259C /* PaymentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB0DEC42006DAEE0015259C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EB0DEC52006DAEE0015259C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +125,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4E6DF39A200C33E700D21BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB0DEBE2006DAEE0015259C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,11 +184,21 @@
 			path = Healpers;
 			sourceTree = "<group>";
 		};
+		4E6DF39E200C33E700D21BF3 /* PaymentAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E6DF39F200C33E700D21BF3 /* PaymentAppUITests.m */,
+				4E6DF3A1200C33E700D21BF3 /* Info.plist */,
+			);
+			path = PaymentAppUITests;
+			sourceTree = "<group>";
+		};
 		4EB0DEB82006DAEE0015259C = {
 			isa = PBXGroup;
 			children = (
 				4EB0DEC32006DAEE0015259C /* PaymentApp */,
 				4EB0DEDF2006DAEF0015259C /* PaymentAppTests */,
+				4E6DF39E200C33E700D21BF3 /* PaymentAppUITests */,
 				4EB0DEC22006DAEE0015259C /* Products */,
 				483598A92B4CA6BA9B4918BA /* Pods */,
 				A2957C3D2CF3A049B8DF81F6 /* Frameworks */,
@@ -181,6 +211,7 @@
 			children = (
 				4EB0DEC12006DAEE0015259C /* PaymentApp.app */,
 				4EB0DEDC2006DAEF0015259C /* PaymentAppTests.xctest */,
+				4E6DF39D200C33E700D21BF3 /* PaymentAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +239,7 @@
 		4EB0DEDF2006DAEF0015259C /* PaymentAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				4E6DF397200C30B000D21BF3 /* CategoryTests.m */,
 				4EB0DEE02006DAEF0015259C /* PaymentAppTests.m */,
 				4EB0DEE22006DAEF0015259C /* Info.plist */,
 			);
@@ -286,6 +318,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4E6DF39C200C33E700D21BF3 /* PaymentAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6DF3A4200C33E700D21BF3 /* Build configuration list for PBXNativeTarget "PaymentAppUITests" */;
+			buildPhases = (
+				4E6DF399200C33E700D21BF3 /* Sources */,
+				4E6DF39A200C33E700D21BF3 /* Frameworks */,
+				4E6DF39B200C33E700D21BF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E6DF3A3200C33E700D21BF3 /* PBXTargetDependency */,
+			);
+			name = PaymentAppUITests;
+			productName = PaymentAppUITests;
+			productReference = 4E6DF39D200C33E700D21BF3 /* PaymentAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		4EB0DEC02006DAEE0015259C /* PaymentApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB0DEE52006DAEF0015259C /* Build configuration list for PBXNativeTarget "PaymentApp" */;
@@ -335,6 +385,11 @@
 			attributes = {
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
+					4E6DF39C200C33E700D21BF3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4EB0DEC02006DAEE0015259C;
+					};
 					4EB0DEC02006DAEE0015259C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -361,11 +416,19 @@
 			targets = (
 				4EB0DEC02006DAEE0015259C /* PaymentApp */,
 				4EB0DEDB2006DAEF0015259C /* PaymentAppTests */,
+				4E6DF39C200C33E700D21BF3 /* PaymentAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4E6DF39B200C33E700D21BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB0DEBF2006DAEE0015259C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +553,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4E6DF399200C33E700D21BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6DF3A0200C33E700D21BF3 /* PaymentAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB0DEBD2006DAEE0015259C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,12 +593,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB0DEE12006DAEF0015259C /* PaymentAppTests.m in Sources */,
+				4E6DF398200C30B000D21BF3 /* CategoryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4E6DF3A3200C33E700D21BF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB0DEC02006DAEE0015259C /* PaymentApp */;
+			targetProxy = 4E6DF3A2200C33E700D21BF3 /* PBXContainerItemProxy */;
+		};
 		4EB0DEDE2006DAEF0015259C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4EB0DEC02006DAEE0015259C /* PaymentApp */;
@@ -547,6 +624,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4E6DF3A5200C33E700D21BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2P72URJYJW;
+				INFOPLIST_FILE = PaymentAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vsantos.nasc.PaymentAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaymentApp;
+			};
+			name = Debug;
+		};
+		4E6DF3A6200C33E700D21BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2P72URJYJW;
+				INFOPLIST_FILE = PaymentAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vsantos.nasc.PaymentAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaymentApp;
+			};
+			name = Release;
+		};
 		4EB0DEE32006DAEF0015259C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -687,6 +792,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2P72URJYJW;
 				INFOPLIST_FILE = PaymentAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsantos.nasc.PaymentAppTests;
@@ -702,6 +808,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2P72URJYJW;
 				INFOPLIST_FILE = PaymentAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsantos.nasc.PaymentAppTests;
@@ -714,6 +821,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4E6DF3A4200C33E700D21BF3 /* Build configuration list for PBXNativeTarget "PaymentAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6DF3A5200C33E700D21BF3 /* Debug */,
+				4E6DF3A6200C33E700D21BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4EB0DEBC2006DAEE0015259C /* Build configuration list for PBXProject "PaymentApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
